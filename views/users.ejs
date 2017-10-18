@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>List all users</h3>
+    <form action="/users" method="post">
+      <input type="text" name="first_name" placeholder="first_name">
+      <input type="text" name="last_name" placeholder="last_name">
+      <input type="email" name="email" placeholder="email">
+      <input type="number" name="age" placeholder="age">
+      <input type="submit" value="Create">
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(let i = 0; i<users.length; i++){ %>
+            <tr>
+              <td><%= users[i].first_name %></td>
+              <td><%= users[i].last_name %></td>
+              <td><%= users[i].email %></td>
+              <td><%= users[i].age %></td>
+              <td><a href="/user/<%= users[i].id %>">View Profile</a></td>
+            </tr>
+          <% } %>
+        </tbody>
+
+    </table>
+  </body>
+</html>

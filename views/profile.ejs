@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User #<%= user.id%> </title>
+  </head>
+  <body>
+    <a href="/users">Back</a>
+    <p>Id - <%= user.id %></p>
+    <p>Name - <%= user.first_name %> <%= user.last_name %></p>
+    <p>Email - <%= user.email %></p>
+    <p>Age - <%= user.age %></p>
+    <a href="/edit/<%= user.id %>">Edit</a> - <a href="/delete/<%= user.id %>">Delete</a>
+  </body>
+</html>
