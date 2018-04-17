@@ -1,4 +1,4 @@
-let bcrypt = require('bcrypt')
+let bcrypt = require('bcrypt-nodejs')
 let SALT_WORK_FACTOR = 10;
 
 module.exports = {
