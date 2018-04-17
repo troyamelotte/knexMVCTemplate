@@ -9,7 +9,7 @@ module.exports = {
           if (err) reject(err);
 
           // hash the password using our new salt
-          bcrypt.hash(user.password, salt, function(err, hash) {
+          bcrypt.hash(user.password, salt, null, function(err, hash) {
               if (err) reject(err);
 
               // override the cleartext password with the hashed one
