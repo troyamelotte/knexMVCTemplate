@@ -12,7 +12,7 @@ module.exports = function(app){
   app.use(session({
       secret: 'keyboard cat',
       cookie: {
-          maxAge: 2592000 // 30 days
+          maxAge: 259200000 // 30 days
       },
       resave: false,
       saveUninitialized: false,
